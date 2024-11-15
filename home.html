@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - MediConecta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+    <header class="bg-success text-white py-3">
+        <div class="container text-center">
+            <h1 class="h4 mb-3">MediConecta</h1>
+            <nav>
+                <ul class="navbar-nav d-flex flex-row justify-content-center flex-wrap">
+                    <li class="nav-item">
+                        <a href="home.html" class="nav-link text-white mx-2">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="view/historial.html" class="nav-link text-white mx-2">Historial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="view/recordatorios.html" class="nav-link text-white mx-2">Recordatorios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="view/reserva.html" class="nav-link text-white mx-2">Reservas</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <div class="text-center mb-5">
+            <h1 class="text-success">Bienvenido a MediConecta</h1>
+            <p class="lead">Tu portal de salud integral, diseñado para mantenerte al tanto de tus citas, historial médico y más.</p>
+        </div>
+
+        <section class="row mb-5">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Historial Médico</h5>
+                        <p class="card-text">Consulta y mantén un registro de tu historial médico.</p>
+                        <a href="historial.html" class="btn btn-success">Ver Historial</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Recordatorios</h5>
+                        <p class="card-text">Configura recordatorios para tus medicamentos y citas.</p>
+                        <a href="recordatorios.html" class="btn btn-success">Ver Recordatorios</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Reservas</h5>
+                        <p class="card-text">Agenda y consulta tus próximas citas médicas.</p>
+                        <a href="reserva.html" class="btn btn-success">Reservar Cita</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-center text-success mb-4">Nuestros Servicios</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Consulta Médica</h5>
+                            <p class="card-text">Accede a consultas con profesionales de distintas especialidades para cuidar de tu salud.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Asesoría Nutricional</h5>
+                            <p class="card-text">Obtén guías y consejos para mantener una dieta balanceada y saludable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2024 MediConecta - Todos los derechos reservados.</p>
+            <p class="mb-0">Contacto: info@mediconecta.com | Tel: 123-456-7890</p>
+        </div>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #chat-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            max-height: 400px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Oculto por defecto */
+        }
+        #chat-header {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            position: relative;
+        }
+        #close-chat {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #chat-box {
+            background-color: #f8f9fa;
+            height: 250px;
+            padding: 10px;
+            overflow-y: scroll;
+        }
+        #chat-input-container {
+            display: flex;
+            border-top: 1px solid #ccc;
+        }
+        #chat-input {
+            flex-grow: 1;
+            border: none;
+            padding: 10px;
+        }
+        #send-btn {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #chat-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #28a745;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+    <!-- Ícono de chat -->
+    <button id="chat-icon">💬</button>
+
+    <!-- Contenedor del chat -->
+    <div id="chat-container">
+        <div id="chat-header">
+            Chat con Bot
+            <button id="close-chat">✖</button>
+        </div>
+        <div id="chat-box">
+            <p><strong>Bot:</strong> ¡Hola! Bienvenido al chat de MediConecta. ¿En qué puedo ayudarte hoy?</p>
+        </div>
+        <div id="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Escribe un mensaje..." />
+            <button id="send-btn">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        const chatIcon = document.getElementById('chat-icon');
+        const chatContainer = document.getElementById('chat-container');
+        const closeChat = document.getElementById('close-chat');
+
+        // Muestra/oculta el chat al hacer clic en el ícono
+        chatIcon.addEventListener('click', () => {
+            chatContainer.style.display = 'block';
+        });
+
+        // Cierra el chat al hacer clic en la "X"
+        closeChat.addEventListener('click', () => {
+            chatContainer.style.display = 'none';
+        });
+
+        // Maneja el envío de mensajes
+        document.getElementById('send-btn').addEventListener('click', () => {
+            const input = document.getElementById('chat-input');
+            const chatBox = document.getElementById('chat-box');
+            const userMessage = input.value;
+
+            if (userMessage.trim() !== '') {
+                chatBox.innerHTML += `<p><strong>Tú:</strong> ${userMessage}</p>`;
+                input.value = '';
+
+                // Simulación de respuesta del bot
+                setTimeout(() => {
+                    chatBox.innerHTML += `<p><strong>Bot:</strong> Esto es una respuesta simulada.</p>`;
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }, 1000);
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
