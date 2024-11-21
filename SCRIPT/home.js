@@ -1,4 +1,5 @@
 
+
 const chatIcon = document.getElementById('chat-icon');
 const chatContainer = document.getElementById('chat-container');
 const closeChat = document.getElementById('close-chat');

@@ -6,36 +6,31 @@
     <title>Inicio - MediConecta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/home.css">
 </head>
 <body>
 
-
-    <header class="bg-success text-white py-3">
-        <div class="container text-center">
-            <h1 class="h4 mb-3">MediConecta</h1>
-            <nav>
-                <ul class="navbar-nav d-flex flex-row justify-content-center flex-wrap">
-                    <li class="nav-item">
-                        <a href="../VIEW/home.html" class="nav-link text-white mx-2">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="historial.html" class="nav-link text-white mx-2">Historial</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="recordatorios.html" class="nav-link text-white mx-2">Recordatorios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="reserva.html" class="nav-link text-white mx-2">Reservas</a>
-                    </li>
-                </ul>
-            </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-title">
+            <h1>MediConecta</h1>
         </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="../VIEW/home.html">Inicio</a></li>
+                <li><a href="historial.html">Historial</a></li>
+                <li><a href="recordatorios.html">Recordatorios</a></li>
+                <li><a href="reserva.html">Reservas</a></li>
+                <li><a href="login.html">Salir</a></li>
+            </ul>
+        </nav>
     </header>
+    
 
-
+    <!-- Main Content -->
     <div class="container my-5">
         <div class="text-center mb-5">
-            <h1 class="text-success">Bienvenido a MediConecta</h1>
+            <h2 class="text-success">Bienvenido a MediConecta</h2>
             <p class="lead">Tu portal de salud integral, diseñado para mantenerte al tanto de tus citas, historial médico y más.</p>
         </div>
 
@@ -45,7 +40,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Historial Médico</h5>
                         <p class="card-text">Consulta y mantén un registro de tu historial médico.</p>
-                        <a href="historial.html" class="btn btn-success">Ver Historial</a>
+                        <a href="historial.html" class="btn btn-success">VER HISTORIAL</a>
                     </div>
                 </div>
             </div>
@@ -54,7 +49,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Recordatorios</h5>
                         <p class="card-text">Configura recordatorios para tus medicamentos y citas.</p>
-                        <a href="recordatorios.html" class="btn btn-success">Ver Recordatorios</a>
+                        <a href="recordatorios.html" class="btn btn-success">VER RECORDATORIOS</a>
                     </div>
                 </div>
             </div>
@@ -63,48 +58,15 @@
                     <div class="card-body text-center">
                         <h5 class="card-title">Reservas</h5>
                         <p class="card-text">Agenda y consulta tus próximas citas médicas.</p>
-                        <a href="reserva.html" class="btn btn-success">Reservar Cita</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2 class="text-center text-success mb-4">Nuestros Servicios</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Consulta Médica</h5>
-                            <p class="card-text">Accede a consultas con profesionales de distintas especialidades para cuidar de tu salud.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Asesoría Nutricional</h5>
-                            <p class="card-text">Obtén guías y consejos para mantener una dieta balanceada y saludable.</p>
-                        </div>
+                        <a href="reserva.html" class="btn btn-success">RESERVAR CITA</a>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <footer class="bg-dark text-white py-3">
-        <div class="container text-center">
-            <p class="mb-1">&copy; 2024 MediConecta - Todos los derechos reservados.</p>
-            <p class="mb-0">Contacto: info@mediconecta.com | Tel: 123-456-7890</p>
-        </div>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <button id="chat-icon">💬</button>
-
     <div id="chat-container">
         <div id="chat-header">
             Chat con Bot
@@ -119,42 +81,14 @@
         </div>
     </div>
 
-    <script>
-        const chatIcon = document.getElementById('chat-icon');
-        const chatContainer = document.getElementById('chat-container');
-        const closeChat = document.getElementById('close-chat');
-
-        chatIcon.addEventListener('click', () => {
-            chatContainer.style.display = 'block';
-        });
-
-        closeChat.addEventListener('click', () => {
-            chatContainer.style.display = 'none';
-        });
-
-        document.getElementById('send-btn').addEventListener('click', () => {
-            const input = document.getElementById('chat-input');
-            const chatBox = document.getElementById('chat-box');
-            const userMessage = input.value;
-
-            if (userMessage.trim() !== '') {
-                chatBox.innerHTML += `<p><strong>Tú:</strong> ${userMessage}</p>`;
-                input.value = '';
-
-                setTimeout(() => {
-                    chatBox.innerHTML += `<p><strong>Bot:</strong> Esto es una respuesta simulada.</p>`;
-                    chatBox.scrollTop = chatBox.scrollHeight;
-                }, 1000);
-            }
-        });
-    </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
-
+    <footer class="bg-dark text-white py-3">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2024 MediConecta - Todos los derechos reservados.</p>
+            <p class="mb-0">Contacto: info@mediconecta.com | Tel: 123-456-7890</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../SCRIPT/home.js">    </script>
 </body>
 </html>
