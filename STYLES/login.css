@@ -2,7 +2,24 @@ body {
     font-family: Arial, sans-serif;
     color: #578659;
     overflow-x: hidden;
+    position: relative; 
 }
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/pngtree-doctor-holding-stethoscope-in-hand-against-white-background-image_764536.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(8px); 
+    z-index: -1; 
+}
+
 
 h2 {
     color: #85cf88;
@@ -17,59 +34,61 @@ footer p {
 }
 
 
-/* General del header */
+
+
+
 .header {
-    display: flex; /* Flexbox para organizar contenido */
-    justify-content: space-between; /* Título a la izquierda, menú a la derecha */
-    align-items: center; /* Centrado verticalmente */
-    background-color: #85cf88; /* Fondo verde */
-    color: white; /* Texto blanco */
-    padding: 15px 20px; /* Espaciado interno */
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+    background-color: #85cf88;
+    color: white; 
+    padding: 15px 20px;
 }
 
-/* Estilo del título */
+
 .header-title h1 {
-    margin: 0; /* Sin margen extra */
-    font-size: 1.8rem; /* Tamaño del título */
-    font-weight: bold; /* Negrita */
+    margin: 0; 
+    font-size: 1.8rem; 
+    font-weight: bold; 
 }
 
-/* Estilo del menú de navegación */
+
 .header-nav ul {
-    list-style: none; /* Elimina viñetas de la lista */
-    margin: 0; /* Sin margen */
-    padding: 0; /* Sin relleno */
-    display: flex; /* Elementos en fila */
-    gap: 20px; /* Espaciado entre elementos */
+    list-style: none;
+    margin: 0;
+    padding: 0; 
+    display: flex; 
+    gap: 20px; 
 }
 
 .header-nav a {
-    text-decoration: none; /* Sin subrayado */
-    color: white; /* Texto blanco */
-    font-weight: bold; /* Negrita */
-    font-size: 1rem; /* Tamaño de fuente */
-    transition: color 0.3s ease; /* Suavidad en hover */
+    text-decoration: none; 
+    color: white; 
+    font-weight: bold; 
+    font-size: 1rem; 
+    transition: color 0.3s ease; 
 }
 
-/* Efecto hover en los enlaces */
+
 .header-nav a:hover {
-    color: #d4f5d4; /* Color más claro */
+    color: #d4f5d4; 
 }
 
-/* Espaciado entre los elementos del formulario */
+
 #loginForm .btn {
-    margin-bottom: 20px; /* Añade espacio debajo del botón */
+    margin-bottom: 20px; 
 }
 
-/* Espaciado entre enlaces */
+
 .text-center a {
-    display: block; /* Muestra los enlaces como bloques para separarlos */
-    margin-top: 10px; /* Añade espacio entre los enlaces */
-    color: #28a745; /* Cambia el color del enlace */
+    display: block; 
+    margin-top: 10px;
+    color: #28a745; 
 }
 
 .text-center a:hover {
-    text-decoration: underline; /* Subraya el enlace al pasar el cursor */
+    text-decoration: underline; 
 }
 
 

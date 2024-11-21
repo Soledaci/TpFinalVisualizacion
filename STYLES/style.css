@@ -12,9 +12,16 @@ h2 {
     margin-top: 0;
 }
 
+footer {
+   bottom: 0;
+    
+}
+
 footer p {
     margin: 0;
 }
+
+
 
 
 /* General del header */

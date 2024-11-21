@@ -14,12 +14,12 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Asegura que esté encima del resto del contenido */
+    z-index: 1000; 
 }
 
 #chat-container {
     position: fixed;
-    bottom: 80px; /* Ajustado para no superponer el botón flotante */
+    bottom: 80px; 
     right: 20px;
     width: 300px;
     max-height: 400px;
@@ -76,6 +76,37 @@
     border: none;
     padding: 10px;
     cursor: pointer;
+}
+
+.bg-dark{
+    margin-top: 22.5em;
+}
+
+
+@media (max-width: 768px) {
+    #chat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    #chat-container {
+        width: 90%;
+        right: 5%;
+        bottom: 70px;
+    }
+
+    .header-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
 }
 
 
