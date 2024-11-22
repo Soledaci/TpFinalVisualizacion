@@ -24,102 +24,95 @@ footer p {
 
 
 
-/* General del header */
+
 .header {
-    display: flex; /* Flexbox para organizar contenido */
-    justify-content: space-between; /* Título a la izquierda, menú a la derecha */
-    align-items: center; /* Centrado verticalmente */
-    background-color: #85cf88; /* Fondo verde */
-    color: white; /* Texto blanco */
-    padding: 15px 20px; /* Espaciado interno */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #85cf88; 
+    color: white; 
+    padding: 15px 20px; 
 }
 
-/* Estilo del título */
+
 .header-title h1 {
-    margin: 0; /* Sin margen extra */
-    font-size: 1.8rem; /* Tamaño del título */
-    font-weight: bold; /* Negrita */
+    margin: 0; 
+    font-size: 1.8rem; 
+    font-weight: bold; 
 }
 
-/* Estilo del menú de navegación */
 .header-nav ul {
-    list-style: none; /* Elimina viñetas de la lista */
-    margin: 0; /* Sin margen */
-    padding: 0; /* Sin relleno */
-    display: flex; /* Elementos en fila */
-    gap: 20px; /* Espaciado entre elementos */
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    gap: 20px; 
 }
 
 .header-nav a {
-    text-decoration: none; /* Sin subrayado */
-    color: white; /* Texto blanco */
-    font-weight: bold; /* Negrita */
-    font-size: 1rem; /* Tamaño de fuente */
-    transition: color 0.3s ease; /* Suavidad en hover */
+    text-decoration: none;
+    color: white; 
+    font-weight: bold;
+    font-size: 1rem; 
+    transition: color 0.3s ease; 
 }
 
-/* Efecto hover en los enlaces */
 .header-nav a:hover {
-    color: #d4f5d4; /* Color más claro */
+    color: #d4f5d4; 
 }
 
-/* Estilo general de las tarjetas */
 .card {
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: #ffffff; 
     border-color: #336886;
-    border-radius: 12px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
-    overflow: hidden; /* Asegura que nada sobresalga de la tarjeta */
-    position: relative; /* Para efectos adicionales si es necesario */
+    border-radius: 12px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    overflow: hidden; 
+    position: relative; 
 }
 
-/* Hover: efecto flotante */
+
 .card:hover {
-    transform: translateY(-10px); /* Eleva la tarjeta */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
-/* Estilo del cuerpo de la tarjeta */
 .card-body {
-    padding: 20px; /* Espaciado interno */
-    text-align: center; /* Centrar contenido */
+    padding: 20px; 
+    text-align: center; 
 }
 
-/* Estilo del título de la tarjeta */
 .card-title {
-    font-size: 1.5rem; /* Tamaño del título */
-    font-weight: bold; /* Negrita */
-    color: #578659; /* Color verde */
-    margin-bottom: 10px; /* Separación inferior */
-    text-transform: capitalize; /* Capitalizar texto */
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: #578659; 
+    margin-bottom: 10px; 
+    text-transform: capitalize; 
 }
 
-/* Estilo del texto de la tarjeta */
+
 .card-text {
-    font-size: 1rem; /* Tamaño de texto */
-    color: #000000; /* Color gris */
-    margin-bottom: 20px; /* Separación inferior */
-    line-height: 1.6; /* Mejor lectura */
+    font-size: 1rem; 
+    color: #000000; 
+    margin-bottom: 20px; 
+    line-height: 1.6; 
 }
 
-/* Estilo del botón */
 .card a {
-    text-decoration: none; /* Sin subrayado */
-    color: #578659; /* Texto blanco */
-    background-color: #85cf88; /* Fondo verde */
-    padding: 10px 15px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    font-weight: bold; /* Negrita */
-    transition: background-color 0.3s ease; /* Transición en color */
+    text-decoration: none; 
+    color: #578659; 
+    background-color: #85cf88; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease; 
 }
 
-/* Hover del botón */
+
 .card a:hover {
-    background-color: #85cf88; /* Verde más oscuro */
+    background-color: #85cf88; 
 }
 
-/* Estilo adicional para animar las tarjetas */
 .card:before {
     content: "";
     position: absolute;
@@ -127,7 +120,7 @@ footer p {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #28a74533, #ffffff33); /* Efecto de brillo */
+    background: linear-gradient(135deg, #28a74533, #ffffff33); 
     z-index: -1;
     transform: scale(1.1);
     opacity: 0;
@@ -135,23 +128,23 @@ footer p {
 }
 
 .card:hover:before {
-    opacity: 1; /* Muestra el brillo al pasar el ratón */
+    opacity: 1; 
 }
 
 
-/* Contenedor principal */
+
 .main-container {
-    background-color: #ffffff; /* Fondo blanco */
-    border-radius: 12px; /* Bordes redondeados */
-    padding: 30px; /* Espaciado interno */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto */
-    max-width: 1200px; /* Ancho máximo */
-    margin: 40px auto; /* Centra horizontalmente y agrega margen superior/inferior */
+    background-color: #ffffff; 
+    border-radius: 12px; 
+    padding: 30px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 1200px; 
+    margin: 40px auto; 
 }
 
-/* Centrando el contenido dentro del main */
+
 .main-container .container {
-    text-align: center; /* Centrar texto y otros elementos */
+    text-align: center; 
 }
 
 
