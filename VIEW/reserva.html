@@ -1,139 +1,281 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reservas - MediConecta</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/home.css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light header">
+      <div class="container-fluid header-title">
+        <a class="navbar-brand" href="../VIEW/home.html"
+          ><h1 class="header-title">MediConecta</h1></a
+        >
 
-    <header class="header">
-        <div class="header-title">
-            <h1>MediConecta</h1>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </button>
+        <div
+          class="collapse navbar-collapse header-nav justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="historial.html">Historial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="recordatorios.html">Recordatorios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reserva.html">Reservas</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Salir</a>
+            </li>
+          </ul>
         </div>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="../VIEW/home.html">Inicio</a></li>
-                <li><a href="historial.html">Historial</a></li>
-                <li><a href="recordatorios.html">Recordatorios</a></li>
-                <li><a href="reserva.html">Reservas</a></li>
-                <li><a href="login.html">Salir</a></li>
-            </ul>
-        </nav>
-    </header>
+      </div>
+    </nav>
 
     <div class="main-container">
-    <div class="container my-5">
+      <div class="container my-5">
         <h1 class="text-center text-success mb-4">Reservas Médicas</h1>
 
         <section class="mb-5">
-            <h2>Seleccionar Servicio</h2>
-            <div class="card p-3">
-                <form>
-                    <div class="mb-3">
-                        <label for="especialidad" class="form-label">Especialidad</label>
-                        <select id="especialidad" class="form-select" required>
-                            <option value="" disabled selected>Seleccione una especialidad</option>
-                            <option value="cardiologia">Cardiología</option>
-                            <option value="nutricion">Nutrición</option>
-                            <option value="dermatologia">Dermatología</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="fecha" class="form-label">Fecha de la cita</label>
-                        <input type="date" id="fecha" class="form-control" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="hora" class="form-label">Hora de la cita</label>
-                        <input type="time" id="hora" class="form-control" required>
-                    </div>
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-success">Reservar Cita</button>
-                    </div>
-                </form>
-            </div>
+          <h2 class="mb-4">Seleccionar Servicio</h2>
+          <div class="card p-3">
+            <form>
+              <div class="mb-3">
+                <label for="especialidad" class="form-label"
+                  >Especialidad</label
+                >
+                <select id="especialidad" class="form-select" required>
+                  <option value="" disabled selected>
+                    Seleccione una especialidad
+                  </option>
+                  <option value="cardiologia">Cardiología</option>
+                  <option value="nutricion">Nutrición</option>
+                  <option value="dermatologia">Dermatología</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha de la cita</label>
+                <input type="date" id="fecha" class="form-control" required />
+              </div>
+              <div class="mb-3">
+                <label for="hora" class="form-label">Hora de la cita</label>
+                <input type="time" id="hora" class="form-control" required />
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-success btn-accion">
+                  Reservar Cita
+                </button>
+              </div>
+            </form>
+          </div>
         </section>
 
         <section class="mb-5">
-            <h2>Mis Reservas</h2>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Especialidad</th>
-                            <th>Hora</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>10/11/2024</td>
-                            <td>Cardiología</td>
-                            <td>10:00 AM</td>
-                            <td>
-                                <button class="btn btn-warning btn-sm">Modificar</button>
-                                <button class="btn btn-danger btn-sm">Cancelar</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>15/11/2024</td>
-                            <td>Nutrición</td>
-                            <td>12:00 PM</td>
-                            <td>
-                                <button class="btn btn-warning btn-sm">Modificar</button>
-                                <button class="btn btn-danger btn-sm">Cancelar</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+          <h2 class="mb-4">Mis Reservas</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Especialidad</th>
+                  <th>Hora</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10/11/2024</td>
+                  <td>Cardiología</td>
+                  <td>10:00 AM</td>
+                  <td>
+                    <button
+                      class="btn btn-warning btn-sm btn-accion-mod"
+                      title="Modificar"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-pencil"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm btn-accion-mod"
+                      title="Eliminar"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-trash"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                        />
+                        <path
+                          d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                        />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>15/11/2024</td>
+                  <td>Nutrición</td>
+                  <td>12:00 PM</td>
+                  <td>
+                    <button
+                      class="btn btn-warning btn-sm btn-accion-mod"
+                      title="Modificar"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-pencil"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm btn-accion-mod"
+                      title="Eliminar"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-trash"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                        />
+                        <path
+                          d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                        />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
+      </div>
     </div>
-</div>
-
 
     <button id="chat-icon">💬</button>
     <div id="chat-container">
-        <div id="chat-header">
-            Chat con Bot
-            <button id="close-chat">✖</button>
-        </div>
-        <div id="chat-box">
-            <p><strong>Bot:</strong> ¡Hola! Bienvenido al chat de MediConecta. ¿En qué puedo ayudarte hoy?</p>
-        </div>
-        <div id="chat-input-container">
-            <input type="text" id="chat-input" placeholder="Escribe un mensaje..." />
-            <button id="send-btn">Enviar</button>
-        </div>
+      <div id="chat-header">
+        Chat con Bot
+        <button id="close-chat">✖</button>
+      </div>
+      <div id="chat-box">
+        <p>
+          <strong>Bot:</strong> ¡Hola! Bienvenido al chat de MediConecta. ¿En
+          qué puedo ayudarte hoy?
+        </p>
+      </div>
+      <div id="chat-input-container">
+        <input
+          type="text"
+          id="chat-input"
+          placeholder="Escribe un mensaje..."
+        />
+        <button id="send-btn">Enviar</button>
+      </div>
     </div>
 
     <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p class="mb-2">&copy; 2024 MediConecta - Todos los derechos reservados.</p>
-            <p class="mb-3">Contacto: info@mediconecta.com | Tel: 123-456-7890</p>
-            <div>
-                <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">
-                    <i class="fab fa-facebook fa-lg"></i>
-                </a>
-                <a href="https://www.twitter.com" target="_blank" class="text-white mx-2">
-                    <i class="fab fa-twitter fa-lg"></i>
-                </a>
-                <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
-                    <i class="fab fa-instagram fa-lg"></i>
-                </a>
-                <a href="https://www.linkedin.com" target="_blank" class="text-white mx-2">
-                    <i class="fab fa-linkedin fa-lg"></i>
-                </a>
-            </div>
+      <div class="container text-center">
+        <p class="mb-2">
+          &copy; 2024 MediConecta - Todos los derechos reservados.
+        </p>
+        <p class="mb-3">Contacto: info@mediconecta.com | Tel: 123-456-7890</p>
+        <div>
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            class="text-white mx-2"
+          >
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            class="text-white mx-2"
+          >
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            class="text-white mx-2"
+          >
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            class="text-white mx-2"
+          >
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
         </div>
+      </div>
     </footer>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../SCRIPT/home.js"></script>
-</body>
+  </body>
 </html>

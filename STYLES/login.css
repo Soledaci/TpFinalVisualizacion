@@ -1,109 +1,181 @@
 body {
-    font-family: Arial, sans-serif;
-    color: #578659;
-    overflow-x: hidden;
-    position: relative; 
+  font-family: Arial, sans-serif;
+  color: #578659;
+  overflow-x: hidden;
+  position: relative;
 }
 
 body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/pngtree-doctor-holding-stethoscope-in-hand-against-white-background-image_764536.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: blur(8px); 
-    z-index: -1; 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/pngtree-doctor-holding-stethoscope-in-hand-against-white-background-image_764536.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1;
 }
 
-
 h2 {
-    color: #85cf88;
+  color: #85cf88;
 }
 
 .hero {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 footer p {
-    margin: 0;
+  margin: 0;
 }
 
+input:focus,
+input:focus-visible,
+select:focus,
+select:focus-visible {
+  box-shadow: none !important;
+  border-color: #578659 !important;
+}
 
+input:hover,
+select:hover {
+  border-color: #85cf88 !important;
+}
 
+button {
+  border: none !important;
+}
 
+.btn-accion {
+  text-decoration: none !important; /* Sin subrayado */
+  color: white !important; /* Texto blanco */
+  background-color: #85cf88 !important; /* Fondo verde */
+  padding: 10px 15px !important; /* Espaciado interno */
+  border-radius: 5px !important; /* Bordes redondeados */
+  border: none !important; /* Bordes redondeados */
+  font-weight: bold !important; /* Negrita */
+  transition: background-color 0.3s ease !important; /* Transición en color */
+}
+
+.btn-accion:hover {
+  background-color: #578659 !important; /* Verde más oscuro */
+}
+
+/* General del header */
+.navbar-toggler svg {
+  width: 30px; /* Adjust width */
+  height: 30px; /* Adjust height */
+  color: white;
+  transition: color 0.2s ease-in-out; /* Smooth transition for color */
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.navbar-toggler:hover svg {
+  color: #d4f5d4;
+}
 
 .header {
-    display: flex; 
-    justify-content: space-between;
-    align-items: center; 
-    background-color: #85cf88;
-    color: white; 
-    padding: 15px 20px;
+  display: flex; /* Flexbox para organizar contenido */
+  justify-content: space-between; /* Título a la izquierda, menú a la derecha */
+  align-items: center; /* Centrado verticalmente */
+  background-color: #85cf88 !important; /* Fondo verde */
+  color: white; /* Texto blanco */
+  padding: 15px 20px; /* Espaciado interno */
 }
 
-
-.header-title h1 {
-    margin: 0; 
-    font-size: 1.8rem; 
-    font-weight: bold; 
+/* Estilo del título */
+.header-title {
+  color: white; /* Texto blanco */
+  margin: 0; /* Sin margen extra */
+  font-size: 1.8rem; /* Tamaño del título */
+  font-weight: bold; /* Negrita */
 }
 
-
+/* Estilo del menú de navegación */
 .header-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0; 
-    display: flex; 
-    gap: 20px; 
+  list-style: none; /* Elimina viñetas de la lista */
+  margin: 0; /* Sin margen */
+  padding: 0; /* Sin relleno */
+  display: flex; /* Elementos en fila */
+  gap: 20px; /* Espaciado entre elementos */
 }
 
 .header-nav a {
-    text-decoration: none; 
-    color: white; 
-    font-weight: bold; 
-    font-size: 1rem; 
-    transition: color 0.3s ease; 
+  text-decoration: none; /* Sin subrayado */
+  color: white; /* Texto blanco */
+  font-weight: bold; /* Negrita */
+  font-size: 1rem; /* Tamaño de fuente */
+  transition: color 0.3s ease; /* Suavidad en hover */
 }
 
+/* Efecto hover en los enlaces */
+.header-nav a:hover {
+  color: #d4f5d4; /* Color más claro */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #85cf88;
+  color: white;
+  padding: 15px 20px;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.header-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
 
 .header-nav a:hover {
-    color: #d4f5d4; 
+  color: #d4f5d4;
 }
-
 
 #loginForm .btn {
-    margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
-
 .text-center a {
-    display: block; 
-    margin-top: 10px;
-    color: #28a745; 
+  display: block;
+  margin-top: 10px;
+  color: #28a745;
 }
 
 .text-center a:hover {
-    text-decoration: underline; 
+  text-decoration: underline;
 }
-
-
-
 
 @media (max-width: 576px) {
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-    }
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-a{
-    text-decoration: none;
-    color: white;
+a {
+  text-decoration: none;
+  color: white;
 }
-
-

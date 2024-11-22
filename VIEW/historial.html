@@ -1,156 +1,223 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Historial Médico - MediConecta</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/home.css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/home.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light header">
+      <div class="container-fluid header-title">
+        <a class="navbar-brand" href="../VIEW/home.html"
+          ><h1 class="header-title">MediConecta</h1></a
+        >
 
-    <header class="header">
-        <div class="header-title">
-            <h1>MediConecta</h1>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </button>
+        <div
+          class="collapse navbar-collapse header-nav justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="historial.html">Historial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="recordatorios.html">Recordatorios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reserva.html">Reservas</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Salir</a>
+            </li>
+          </ul>
         </div>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="../VIEW/home.html">Inicio</a></li>
-                <li><a href="historial.html">Historial</a></li>
-                <li><a href="recordatorios.html">Recordatorios</a></li>
-                <li><a href="reserva.html">Reservas</a></li>
-                <li><a href="login.html">Salir</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+      </div>
+    </nav>
+
     <div class="main-container">
-    <div class="container my-5">
-        <h2 class="text-center text-success mb-4">Historial Médico</h2>
+      <div class="container my-5">
+        <h1 class="text-center text-success mb-4">Historial Médico</h1>
 
         <section class="mb-5">
-            <h3>Información del Paciente</h3>
-            <div class="card p-3">
-                <p><strong>Nombre:</strong> Juan Pérez</p>
-                <p><strong>Edad:</strong> 45 años</p>
-                <p><strong>Género:</strong> Masculino</p>
-                <p><strong>Última actualización:</strong> 08/11/2024</p>
-            </div>
+          <h2 class="mb-4">Información del Paciente</h2>
+          <div class="card p-3 d-flex justify-content-around">
+            <p><strong>Nombre:</strong> Juan Pérez</p>
+            <p><strong>Edad:</strong> 45 años</p>
+            <p><strong>Género:</strong> Masculino</p>
+            <p><strong>Última actualización:</strong> 08/11/2024</p>
+          </div>
         </section>
 
         <section class="mb-5">
-            <h3>Historial de Citas</h3>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Especialidad</th>
-                            <th>Médico</th>
-                            <th>Comentarios</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>01/11/2024</td>
-                            <td>Cardiología</td>
-                            <td>Dra. González</td>
-                            <td>Control de presión arterial</td>
-                        </tr>
-                        <tr>
-                            <td>15/10/2024</td>
-                            <td>Nutrición</td>
-                            <td>Dr. Martínez</td>
-                            <td>Revisión de dieta</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+          <h2 class="mb-4">Historial de Citas</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Especialidad</th>
+                  <th>Médico</th>
+                  <th>Comentarios</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01/11/2024</td>
+                  <td>Cardiología</td>
+                  <td>Dra. González</td>
+                  <td>Control de presión arterial</td>
+                </tr>
+                <tr>
+                  <td>15/10/2024</td>
+                  <td>Nutrición</td>
+                  <td>Dr. Martínez</td>
+                  <td>Revisión de dieta</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section class="mb-5">
-            <h3>Historial de Medicación</h3>
-            <div class="table-responsive">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Medicamento</th>
-                            <th>Dosis</th>
-                            <th>Frecuencia</th>
-                            <th>Fecha de Inicio</th>
-                            <th>Fecha de Fin</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Lisinopril</td>
-                            <td>10 mg</td>
-                            <td>Diaria</td>
-                            <td>01/10/2024</td>
-                            <td>Continuo</td>
-                        </tr>
-                        <tr>
-                            <td>Metformina</td>
-                            <td>500 mg</td>
-                            <td>Dos veces al día</td>
-                            <td>01/09/2024</td>
-                            <td>Continuo</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+          <h2 class="mb-4">Historial de Medicación</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Medicamento</th>
+                  <th>Dosis</th>
+                  <th>Frecuencia</th>
+                  <th>Fecha de Inicio</th>
+                  <th>Fecha de Fin</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Lisinopril</td>
+                  <td>10 mg</td>
+                  <td>Diaria</td>
+                  <td>01/10/2024</td>
+                  <td>Continuo</td>
+                </tr>
+                <tr>
+                  <td>Metformina</td>
+                  <td>500 mg</td>
+                  <td>Dos veces al día</td>
+                  <td>01/09/2024</td>
+                  <td>Continuo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
         <section class="mb-5">
-            <h3>Progreso de Salud</h3>
-            <div class="card p-3">
-                <h5>Peso</h5>
-                <canvas id="pesoChart"></canvas>
-            </div>
+          <h2 class="mb-4">Progreso de Salud</h2>
+          <div class="card p-3 d-flex align-items-center card-peso">
+            <h5>Peso</h5>
+            <canvas id="pesoChart"></canvas>
+          </div>
         </section>
+      </div>
     </div>
-</div>
 
     <button id="chat-icon">💬</button>
     <div id="chat-container">
-        <div id="chat-header">
-            Chat con Bot
-            <button id="close-chat">✖</button>
-        </div>
-        <div id="chat-box">
-            <p><strong>Bot:</strong> ¡Hola! Bienvenido al chat de MediConecta. ¿En qué puedo ayudarte hoy?</p>
-        </div>
-        <div id="chat-input-container">
-            <input type="text" id="chat-input" placeholder="Escribe un mensaje..." />
-            <button id="send-btn">Enviar</button>
-        </div>
+      <div id="chat-header">
+        Chat con Bot
+        <button id="close-chat">✖</button>
+      </div>
+      <div id="chat-box">
+        <p>
+          <strong>Bot:</strong> ¡Hola! Bienvenido al chat de MediConecta. ¿En
+          qué puedo ayudarte hoy?
+        </p>
+      </div>
+      <div id="chat-input-container">
+        <input
+          type="text"
+          id="chat-input"
+          placeholder="Escribe un mensaje..."
+        />
+        <button id="send-btn">Enviar</button>
+      </div>
     </div>
     <footer class="bg-dark text-white py-4">
-        <div class="container text-center">
-            <p class="mb-2">&copy; 2024 MediConecta - Todos los derechos reservados.</p>
-            <p class="mb-3">Contacto: info@mediconecta.com | Tel: 123-456-7890</p>
-            <div>
-                <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">
-                    <i class="fab fa-facebook fa-lg"></i>
-                </a>
-                <a href="https://www.twitter.com" target="_blank" class="text-white mx-2">
-                    <i class="fab fa-twitter fa-lg"></i>
-                </a>
-                <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
-                    <i class="fab fa-instagram fa-lg"></i>
-                </a>
-                <a href="https://www.linkedin.com" target="_blank" class="text-white mx-2">
-                    <i class="fab fa-linkedin fa-lg"></i>
-                </a>
-            </div>
+      <div class="container text-center">
+        <p class="mb-2">
+          &copy; 2024 MediConecta - Todos los derechos reservados.
+        </p>
+        <p class="mb-3">Contacto: info@mediconecta.com | Tel: 123-456-7890</p>
+        <div>
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            class="text-white mx-2"
+          >
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            class="text-white mx-2"
+          >
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            class="text-white mx-2"
+          >
+            <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            class="text-white mx-2"
+          >
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
         </div>
+      </div>
     </footer>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../script/historial.js"></script>
     <script src="../SCRIPT/home.js"></script>
-</body>
+  </body>
 </html>
