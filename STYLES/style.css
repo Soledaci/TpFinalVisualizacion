@@ -66,10 +66,30 @@ select:hover {
 }
 
 /**/
+.nav-link svg {
+  height: 20px;
+}
+/**/
+footer {
+  margin-top: 150px;
+}
+
+/**/
+.img-home {
+  width: 100%;
+}
+
+.textPrincipal-home {
+  font-size: 3.2rem;
+}
+
+.textSecondary-home {
+  font-size: 1.5rem;
+}
 
 /**/
 .card-home {
-  height: 25vh !important;
+  height: 100% !important;
 }
 
 .card-body {
@@ -119,7 +139,8 @@ select:hover {
   gap: 20px;
 }
 
-.header-nav a {
+.header-nav a,
+.header-nav button {
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -127,7 +148,8 @@ select:hover {
   transition: color 0.3s ease;
 }
 
-.header-nav a:hover {
+.header-nav a:hover,
+.header-nav button:hover {
   color: #d4f5d4;
 }
 

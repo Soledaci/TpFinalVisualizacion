@@ -8,6 +8,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/home.css" />
   </head>
@@ -57,22 +59,51 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="login.html">Salir</a>
+              <button class="nav-link" id="login-button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-person-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+              </button>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container my-5">
-      <div class="text-center mb-5">
-        <h2 class="text-success">Bienvenido a MediConecta</h2>
-        <p class="lead">
-          Tu portal de salud integral, diseñado para mantenerte al tanto de tus
-          citas, historial médico y más.
-        </p>
-      </div>
+    <div class="container d-flex flex-column my-5">
+      <div class="row">
+        <div class="home-text col-12 col-lg-7">
+          <h2 class="text-success textPrincipal-home my-5">
+            Bienvenido a MediConecta
+          </h2>
+          <p class="lead textSecondary-home mb-3">
+            Tu portal de salud integral, diseñado para mantenerte al tanto de
+            tus citas, historial médico y más.
+          </p>
 
+          <div>
+            <a class="btn btn-success btn-accion me-2" href="login.html">
+              Iniciar sesion
+            </button>
+
+            <a class="btn btn-success btn-accion" href="registro.html">Registrarse</a>
+          </div>
+        </div>
+
+        <div class="col-5 d-none d-lg-block">
+          <img class="img-home" src="/images/home.png" alt="home" />
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5">
       <section class="row">
         <div class="col-lg-4 mb-4">
           <div class="card shadow-sm card-home">
@@ -134,7 +165,7 @@
       </div>
     </div>
 
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-4 mt-5">
       <div class="container text-center">
         <p class="mb-2">
           &copy; 2024 MediConecta - Todos los derechos reservados.
@@ -172,6 +203,42 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModal">Mi cuenta</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Nombre:</strong> Juan Pérez</p>
+            <p><strong>Edad:</strong> 45 años</p>
+            <p><strong>Género:</strong> Masculino</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success btn-accion"
+              data-bs-dismiss="modal"
+            >
+              Cerrar sesion
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <link
       rel="stylesheet"

@@ -57,7 +57,18 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="login.html">Salir</a>
+              <button class="nav-link" id="login-button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-person-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+                  />
+                </svg>
+              </button>
             </li>
           </ul>
         </div>
@@ -241,7 +252,7 @@
           <div class="modal-footer">
             <button
               type="button"
-              class="btn btn-success"
+              class="btn btn-success btn-accion"
               data-bs-dismiss="modal"
             >
               Aceptar
@@ -311,6 +322,42 @@
         </div>
       </div>
     </footer>
+
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModal">Mi cuenta</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p><strong>Nombre:</strong> Juan Pérez</p>
+            <p><strong>Edad:</strong> 45 años</p>
+            <p><strong>Género:</strong> Masculino</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success btn-accion"
+              data-bs-dismiss="modal"
+            >
+              Cerrar sesion
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <link
       rel="stylesheet"

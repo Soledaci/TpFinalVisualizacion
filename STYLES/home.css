@@ -78,10 +78,6 @@
   cursor: pointer;
 }
 
-.bg-dark {
-  margin-top: 22.5em;
-}
-
 @media (max-width: 768px) {
   #chat-icon {
     width: 50px;

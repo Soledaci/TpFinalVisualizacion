@@ -1,29 +1,37 @@
+const chatIcon = document.getElementById("chat-icon");
+const chatContainer = document.getElementById("chat-container");
+const closeChat = document.getElementById("close-chat");
+const loginButton = document.getElementById("login-button");
 
-
-const chatIcon = document.getElementById('chat-icon');
-const chatContainer = document.getElementById('chat-container');
-const closeChat = document.getElementById('close-chat');
-
-chatIcon.addEventListener('click', () => {
-    chatContainer.style.display = 'block';
+chatIcon.addEventListener("click", () => {
+  chatContainer.style.display = "block";
 });
 
-closeChat.addEventListener('click', () => {
-    chatContainer.style.display = 'none';
+closeChat.addEventListener("click", () => {
+  chatContainer.style.display = "none";
 });
 
-document.getElementById('send-btn').addEventListener('click', () => {
-    const input = document.getElementById('chat-input');
-    const chatBox = document.getElementById('chat-box');
-    const userMessage = input.value;
+document.getElementById("send-btn").addEventListener("click", () => {
+  const input = document.getElementById("chat-input");
+  const chatBox = document.getElementById("chat-box");
+  const userMessage = input.value;
 
-    if (userMessage.trim() !== '') {
-        chatBox.innerHTML += `<p><strong>Tú:</strong> ${userMessage}</p>`;
-        input.value = '';
+  if (userMessage.trim() !== "") {
+    chatBox.innerHTML += `<p><strong>Tú:</strong> ${userMessage}</p>`;
+    input.value = "";
 
-        setTimeout(() => {
-            chatBox.innerHTML += `<p><strong>Bot:</strong> Esto es una respuesta simulada.</p>`;
-            chatBox.scrollTop = chatBox.scrollHeight;
-        }, 1000);
-    }
+    setTimeout(() => {
+      chatBox.innerHTML += `<p><strong>Bot:</strong> Esto es una respuesta simulada.</p>`;
+      chatBox.scrollTop = chatBox.scrollHeight;
+    }, 1000);
+  }
+});
+
+loginButton.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const modal = new bootstrap.Modal(document.getElementById("loginModal"));
+  modal.show();
+
+  loginButton.reset();
 });
